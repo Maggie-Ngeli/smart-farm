@@ -30,10 +30,10 @@
     <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-8">
-            <form method="post" action="update_handler.php">
+            <form action="update_handler.php" method="post">
                 <input readonly class="form-control" value="<?php echo $receivedUserName;?>" name="name" placeholder="User full name" type="text"><br>
                 <input readonly class="form-control" value="<?php echo $receivedUserEmail;?>" name="email_address" placeholder="User email address" type="email"><br>
-                <select class="form-control" name="user" id="user_type">
+                <select class="form-control" name="user_type" id="user_type">
                     <option value="<?php echo $receivedUserType; ?>">
                         <?php echo $receivedUserType; ?>
                     </option>
@@ -42,7 +42,7 @@
                 </select><br>
                 <input name="btn_update" class="btn btn-danger btn-block" value="Update" type="submit">
                 <a class="btn btn-outline-danger btn-block" href="view_users.php">Back</a>
-                <input value="<?php echo $userId; ?>" type="hidden">
+                <input name="u_id" value="<?php echo $userId; ?>" type="hidden">
             </form>
         </div>
         <div class="col-md-2"></div>

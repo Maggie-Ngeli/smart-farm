@@ -21,12 +21,12 @@ if (isset($_POST["btn_sign_in"])) {
 
         // check if user is an admin or normal user
         $logged_in_user = mysqli_fetch_assoc($results);
-        $userId = $logged_in_user["id"];
+        $userId = $logged_in_user["userId"];
         if ($logged_in_user['user'] == 'admin') {
-            $_SESSION ['id'] = $userId;
+            $_SESSION ['userId'] = $userId;
             header("location: landing.php?<?php echo 'login successful'?>");
         }else{
-            $_SESSION ['id'] = $userId;
+            $_SESSION ['userId'] = $userId;
             header("location: order.php?<?php echo 'login successful'?>");
         }
     }else{

@@ -60,7 +60,7 @@ if (! (isset($_SESSION['cart']))){
         </div>
     </nav>
 
-<!--    create the view cart, clear cart and logout buttons-->
+<!--    create the view cart and logout buttons-->
 <div class="container container-fluid">
     <div class="row m-2">
         <div class="col-md-4">
@@ -100,7 +100,7 @@ if (! (isset($_SESSION['cart']))){
                 <input type='text' name='qty' id='qty'>
                 <input type='hidden' name='pID' value='$productId'>
                 <input type='submit' name='btn_add' value='Add to cart'>
-                <input type='submit' formaction='add_ordered_items.php' name='btn_add_db' value='Save'>
+                <input type='submit' formaction='add_ordered_items.php' formmethod='post' name='btn_add_db' value='Save'>
             </form>
             </td>
            

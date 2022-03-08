@@ -30,7 +30,7 @@
         $userName = $user["name"];
         $userEmailAddress = $user["email_address"];
         $userType = $user ["user"];
-        $userId = $user ["id"];
+        $userId = $user ["userId"];
 
         echo "<tr>
             <td>$userName</td>
