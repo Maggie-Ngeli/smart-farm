@@ -69,7 +69,7 @@
         <form method="post" action="add_users_handler.php">
             <input class="form-control" name="name" placeholder="User full name" type="text"><br>
             <input class="form-control" name="email_address" placeholder="User email address" type="email"><br>
-            <select class="form-control" name="user" id="user_type">
+            <select class="form-control" name="user_type" id="user_type">
                 <option value="">Select the user type</option>
                 <option value="admin">Admin</option>
                 <option value="user">User</option>

@@ -5,7 +5,7 @@ if (isset($_POST["btn_add"])) {
     //start receiving data from form
     $name=$_POST["name"];
     $email = $_POST["email_address"];
-    $user = $_POST ["user"];
+    $user = $_POST ["user_type"];
     $phoneNumber = $_POST["phone_number"];
     $passWord = $_POST["pswd"];
     $repeatPassWord = $_POST["rpt_pswd"];
@@ -20,9 +20,9 @@ if (isset($_POST["btn_add"])) {
     if ($num > 0) {
         echo "Email already exists";
     }elseif ($passWord != $repeatPassWord){
-        echo "passwords doesn't match";;
+        echo "passwords don't match";
     }else {
-        $signUp = "INSERT INTO `users`(`id`, `name`, `email_address`,`user`, `phone number`, `password`, `repeat_password`)
+        $signUp = "INSERT INTO `users`(`userId`, `name`, `email_address`, `user`, `phone number`, `password`, `repeat_password`)
                                         VALUES (null ,'$name','$email','$user','$phoneNumber','$passWord','$repeatPassWord')";
         mysqli_query($connection, $signUp);
         header("location:landing.php?<?php echo 'adding new user was successful'?>");

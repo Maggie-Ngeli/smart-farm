@@ -22,7 +22,7 @@ if (isset($_POST["btn_sign_up"])) {
     }elseif ($passWord != $repeatPassWord){
        echo "passwords doesn't match";
     }else {
-        $signUp = "INSERT INTO `users`(`id`, `name`, `email_address`, `user`, `phone number`, `password`, `repeat_password`)
+        $signUp = "INSERT INTO `users`(`userId`, `name`, `email_address`, `user`, `phone number`, `password`, `repeat_password`)
                                      VALUES (null ,'$name','$email','user','$phoneNumber','$passWord','$repeatPassWord')";
          mysqli_query($connection, $signUp);
         $_SESSION['success']  = "Sign_up was successful!!";

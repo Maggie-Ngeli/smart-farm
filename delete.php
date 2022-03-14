@@ -7,7 +7,7 @@ if (isset($_GET["u_id"])) {
     //connect to the db to delete
     require_once "db_connection.php";
     //prepare to delete query
-    $deleteQuery = "DELETE FROM `users` WHERE id='$userId'";
+    $deleteQuery = "DELETE FROM `users` WHERE userId='$userId'";
 
     //use mysqli_query () to execute the delete query
     $delete = mysqli_query($connection, $deleteQuery);
